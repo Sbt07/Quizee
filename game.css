@@ -1,0 +1,114 @@
+.choice-container{
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid #001F3F;
+    background-color: white;
+    border-radius: 1rem;
+    margin: 0.8rem;
+}
+.choice-container:hover{
+    cursor: pointer;
+    color: #111;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+.choice-container:hover .choice-prefix {
+    background-color: #001F3F;
+    color: white;
+}
+.choice-prefix{
+    padding: 1.5rem 2.5rem;
+    background-color: #d6e1eb;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    color: #111;
+}
+.choice-text{
+    padding: 1.5rem;
+    width: 100%;
+}
+.correct{
+    background-color: #a0e7b0;
+}
+.incorrect{
+    background-color: #fbced2;
+}
+
+#hud{
+    display: flex;
+    justify-content: space-between;
+}
+.hud-prefix{
+    text-align: center;
+    font-size: 2.2rem;
+}
+.hud-main-text{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+}
+
+#progressBar{
+    width: 20rem;
+    height: 4rem;
+    border: 0.3rem solid #001F3F;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+#progressBarFull{
+    height: 3rem;
+    max-width: 19rem;
+    margin-top: 0.2rem;
+    margin-left: 0.25rem;
+    background-color: #001F3F;
+    border-radius: 1rem;
+    width: 0%;
+}
+
+#loader{
+    border: 1rem solid #becfe1;
+    border-radius: 50%;
+    border-top: 1rem solid #001F3F;
+    width: 7rem;
+    height: 7rem;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width:450px){
+    #loader{
+        border: 0.6rem solid #becfe1;
+        border-top: 0.6rem solid #001F3F;
+        width: 4rem;
+        height: 4rem;
+    }
+    #progressBar{
+        width: 14rem;
+        height: 2rem;
+        border: 0.2rem solid #001F3F;
+        margin-top: 2rem;
+        border-radius: 0.6rem;
+    }
+    #progressBarFull{
+        height: 1.2rem;
+        max-width: 13rem;
+        margin-top: 0.25rem;
+        margin-left: 0.25rem;
+        background-color: #001F3F;
+        border-radius: 0.4rem;
+        width: 0%;
+    }
+    .hud-main-text{
+        margin-top: 1.5rem;
+        font-size: 2.5rem;
+    }
+}

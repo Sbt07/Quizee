@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Crimson Pro', serif;
+    outline: none;
+    border: none;
+    color: #333;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .4s cubic-bezier(0.43, 1.1, .62, 1.08);
+    transition: width none;
+}
+:root{
+    background-color: #f7f9ff;
+    font-size: 62.5%;
+}
+
+h1,h2,h3,h4{
+    margin-bottom: 1rem;
+}
+h1{
+    font-size: 5.4rem;
+    color: #001F3F;
+    margin-bottom: 5rem;
+    font-weight: 400;
+}
+h1 > span{
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+h2{
+    font-size: 2.6rem;
+    margin-bottom: 4rem;
+    font-weight: 400;
+    text-transform: none;
+}
+h3{
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.container > *{
+    width: 100%;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.text-center{
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+
+.btn{
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.15rem solid #001F3F;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #001F3F;
+    background-color: white;
+    border-radius: 1rem;
+}
+.btn:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: #001F3F;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+.btn[disabled]:hover{
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: 0.15rem solid #001F3F;
+    border-radius: 1rem;
+}
+input::placeholder{
+    color: #888;
+}
+
+@media (max-width:450px){
+    h1{
+        font-size: 1rem;
+    }
+    .heading{
+        font-size: 5rem;
+    }
+    input{
+        margin-bottom: 1rem;
+        width: 20rem;
+        padding: 1.5rem;
+        font-size: 1.4rem;
+        border: 0.15rem solid #001F3F;
+        border-radius: 1rem;
+    }
+}
